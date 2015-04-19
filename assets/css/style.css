@@ -1,61 +1,123 @@
-h1,h2,h3,h4,h5,h6 {
-  color: #4B4055;
-  letter-spacing: 10px;
+html {
+  position: relative;
+  min-height: 100%;
 }
-h1 small {
-  color: #7D6592;
-  letter-spacing: 17px;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  color: #333;
 }
-.header-wrapper {
-  padding: 10px 0;
-  background-color: #FBEC2F;
+textarea {
+  width: 100%;
 }
-header > * {
-  text-transform: uppercase;;
-  float: left;
-  padding-right: 20px;
+.margin-10{
+  margin: 10px;
 }
-#logo {
-  width: 170px;
+li {
+  list-style: none;
 }
-.bird_apps_title {
-  width: 160px;
-  text-align: justify;
-}
-.what-we-do {
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 1.5em;
-  padding-top: 20px;
+  background-color: transparent;
+  color: #333;
+  font-size: 0.8em;
 }
-img#the_web {
-  width: 100%;
-  max-width: 300px;
+a:active, a:hover, a:focus {
+  outline: 0 !important;
 }
-.ampersand {
-  font-size: 2.5em;
-  text-align: right;
+img {
+  max-width: 100%;
 }
-img#the_mobile {
-  width: 100%;
-  max-width: 170px;
+.logo {
+  padding: 5px 20px 20px;
+}
+.navbar-default {
+  background-color: transparent !important;
+  border-bottom: 0px;
+}
+.navbar-header {
+  float: left !important;
+}
+.navbar-default a.navbar-brand img {
+  height: 100%;
+}
+.navbar-default a.navbar-brand:hover {
+  color: #000;
+}
+.navbar-collapse.collapse {
+  display: block!important;
+}
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
 }
 
-section {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.navbar-right {
+  float: right!important;
 }
-
-@media screen and (min-width: 769px) {
-  .powerful-apps {
-    text-align: right;
+.projects img {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+.navbar-default .navbar-nav>li>a {
+  margin-top: 13px;
+}
+.empty-btn {
+  border-radius: 100px;
+  border: #999 1px solid;
+  padding: 2px 10px !important;
+  border-color: #666;
+  color: #333 !important;
+  display: inline-block;
+}
+.empty-btn:hover,.empty-btn:active,.empty-btn:focus {
+  text-decoration: none !important;
+  box-shadow: 0px 0px 2px #999;
+}
+.visible-xs .empty-btn {
+  font-size: 1.8em;
+  padding: 5px 15px !important;
+  margin-top: 50px;
+  display: inline-block;
+}
+.header.visible-xs {
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 768px){
+  .navbar-default {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .navbar-default .navbar-nav > li > a {
+    margin-top: 5px;
   }
 }
-@media screen and (max-width: 768px) {
-  #logo {
-    width: 120px;
+@media screen and (min-width: 769px){
+  .projects {
+    margin-top: 500px;
   }
-  .bird_apps_title, .bird_apps_title h1 {
-    padding: 0;
-    margin: 0;
+}
+@media screen and (min-width: 999px ){
+  .projects {
+    margin-top: 140px;
+  }
+  .footer {
+    text-align: left;
+  }
+  body {
+    background: #fff no-repeat url(../images/fat-sparrow.jpg);
+    background-position: right top;
+    background-size: contain;
+    background-attachment: fixed;
   }
 }

@@ -8,37 +8,108 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div class="header-wrapper">
-      <header class="container">
-        <img id="logo" src="assets/images/logo.png" />
-        <div class="bird_apps_title">
-          <h1>
-            Bird
-            <br />
-            <small>Apps</small>
-          </h1>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top hidden-xs">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo-white.png" alt="Bird Apps" />
+          </a>
         </div>
-      </header>
-    </div>
-    <section class="container what-we-do">
-      <div class="row">
-        <div class="col-xs-12 col-sm-2">
-          <p class="powerful-apps">We make powerful apps <span class="hidden-xs">for</span></p>
-        </div>
-        <div class="col-xs-7 col-sm-5">
-          <img src="assets/images/web.png" id="the_web" alt="The Web" />
-        </div>
-        <div class="pull-left hidden-xs">
-          <p class="ampersand">&</p>
-        </div>
-        <div class="col-xs-4 col-sm-4">
-          <img src="assets/images/mobile.png" id="the_mobile" alt="Mobile" />
+        <div id="navbar" class="navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#contact" type="button" class="empty-btn" data-toggle="modal" data-target="#contactModal">Why should you hire us?</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="header visible-xs">
+        <img class="logo" alt="Bird Apps" src="assets/images/logo-white.png" />
+        <a href="#contact" class="empty-btn" type="button" data-toggle="modal" data-target="#contactModal">Why hire us?</a>
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <div class="projects">
+          <img src="assets/images/fat-sparrow.jpg" class="visible-xs" />
+          <a href="https://chalkle.com" target="_blank">
+            <img src="assets/projects/chalkle.jpg" alt="Chalkle.com" />
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="col-xs-12">
+          Design by Matthew Kerr. 
+          <br class="visible-xs" />
+          <a href="http://jdbd.nz" target="_blank">Development by Josh Dean</a>.
+        </p>
+      </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content  text-center">
+          <div class="modal-body">
+            <p> 
+              <strong>We measure the success of our applications in user experience.</strong> 
+              <br />
+              Once a user <em>want</em> to use your application the hard work is done.
+              <br />
+              <br />
+              <a href="#learn-more" class="margin-10 empty-btn toggle-learn-more learn-more">Learn More</a>
+              <a href="#learn-more" class="margin-10 empty-btn toggle-learn-more learn-more" style="display:none">Learn Less</a>
+            </p>
+            <div class="learn-more" style="display:none">
+              <p>
+                Bird Apps is a Wellington based application design and development company. It represents the joint efforts of Matthew Kerr and Josh Dean who primary work on <a href="https://chalkle.com">Chalkle.com</a>. 
+              </p>
+              <p>
+                For new projects we will advise you on the best technologies for your purposes. 
+              </p>
+              <p> However in case you have an existing application you should know that we do most of our work in <strong>Ruby on Rails</strong>, though we also want projects in:
+                <ul>
+                  <li>iOS for iPhone & iPad</li>
+                  <li>Mac Desktop</li>
+                  <li>MVC.NET</li>
+                  <li>Windows Mobile</li>
+                  <li>Windows Desktop (Forms or WPF)</li>
+                </ul>
+              </p>
+              <br />
+            </div>
+            <br />
+            <textarea class="form-control text-center" placeholder="Tell us about your project"></textarea>
+            <br />
+            <input type="text" placeholder="How should we get in contact with you?" class="form-control text-center" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function(){
+        $('.toggle-learn-more').click(function(){
+          $('.learn-more').toggle();
+        });
+      });
+    </script>
   </body>
 </html>
