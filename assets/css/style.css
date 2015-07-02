@@ -16,6 +16,10 @@ textarea {
 li {
   list-style: none;
 }
+.contact {
+  margin: 40px 0;
+  font-size: 1.4em;
+}
 .footer {
   position: absolute;
   bottom: 0;
@@ -36,7 +40,7 @@ img {
   max-width: 100%;
 }
 .logo {
-  padding: 5px 20px 20px;
+  margin: 50px 0 30px;
 }
 .navbar-default {
   background-color: transparent !important;
@@ -89,35 +93,4 @@ img {
   margin-top: 50px;
   display: inline-block;
 }
-.header.visible-xs {
-  text-align: center;
-  margin-top: 50px;
-}
-@media screen and (max-width: 768px){
-  .navbar-default {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
-  .navbar-default .navbar-nav > li > a {
-    margin-top: 5px;
-  }
-}
-@media screen and (min-width: 769px){
-  .projects {
-    margin-top: 500px;
-  }
-}
-@media screen and (min-width: 999px ){
-  .projects {
-    margin-top: 140px;
-  }
-  .footer {
-    text-align: left;
-  }
-  body {
-    background: #fff no-repeat url(../images/fat-sparrow.jpg);
-    background-position: right top;
-    background-size: contain;
-    background-attachment: fixed;
-  }
-}
+
