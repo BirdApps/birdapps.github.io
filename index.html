@@ -44,15 +44,21 @@
 
       <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
         <div class="projects">
-          <a href="https://chalkle.com" target="_blank">
+
+          <a class="projectModal" type="button" data-project="chalkle">
             <img src="assets/projects/chalkle.jpg" alt="Chalkle.com" />
           </a>
-          <a href="http://sspn.me" target="_blank">
+
+          <a class="projectModal" type="button" data-project="sspn">
             <img src="assets/projects/sspn.jpg" alt="SSPN.me" />
           </a>
 
-          <a href="http://tpie.co.nz" target="_blank">
+          <a class="projectModal" type="button" data-project="tpie">
             <img src="assets/projects/tpie.jpg" alt="tpie.co.nz" />
+          </a>
+
+          <a class="projectModal" type="button" data-project="lukeacland">
+            <img src="assets/projects/luke-acland.jpg" alt="lukeacland.co.nz" />
           </a>
 
         </div>
@@ -60,6 +66,33 @@
     </div>
     <footer class="footer">
       <div class="container">
+        <a href="#contact" type="button" class="empty-btn contact visible-xs" data-toggle="modal" data-target="#contactModal">Hire us to develop your app</a>  
+        <a href="#contact" type="button" class="empty-btn contact hidden-xs" data-toggle="modal" data-target="#contactModal">Hire us to design & develop your app</a>  
+        <div class="learn-more">
+          <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-4">
+              <div class="col-xs-12 col-sm-6 text-left"> 
+                <strong>We can help with your next</strong>
+                <ul>
+                  <li>Web App</li>
+                  <li>iOS App</li>
+                  <li>Android App</li>
+                  <li>Web Api</li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-6 text-left"> 
+                <strong>Our clients receive</strong>
+                <ul>
+                  <li>Focus on user experience</li>
+                  <li>Modern Technologies</li>
+                  <li>Excellent Documentation</li>
+                  <li>Visibility of progress</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         <p class="col-xs-12">
           <!-- <a href="http://matt.nz" target="_blank">Matthew's Blog.</a> 
           <br class="visible-xs" />
@@ -78,7 +111,6 @@
           <div class="modal-body">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <p> 
-             
               <br />
               <strong>Let us create great experiences for you and your customers</strong>
               <br />
@@ -103,41 +135,94 @@
                 <br /><br />
               </div>
             </p>
-            <div class="learn-more">
-              <div class="row">
-                <div class="col-xs-12">
-                  <div class="col-xs-12 col-sm-6 text-left"> 
-                    <br />
-                    <strong>We can help with your next</strong>
-                    <ul>
-                      <li>Web App</li>
-                      <li>iOS App</li>
-                      <li>Android App</li>
-                      <li>Web Api</li>
-                    </ul>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 text-left"> 
-                    <br />
-                    <strong>Our clients receive</strong>
-                    <ul>
-                      <li>Focus on user experience</li>
-                      <li>Modern Technologies</li>
-                      <li>Excellent Documentation</li>
-                      <li>Visibility of progress</li>
-                    </ul>
-                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content  text-center">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 text-left">
+                <h1 class="project-title"></h1>
+                <p>
+                  <strong class="project-desc-1">
+                  </strong>
+                </p>
+                <p class="project-desc-2">
+                </p>
+                <p class="project-desc-3">
+                </p>
+                <br />
+                <div class="text-center">
+                  <a class="empty-btn project-link col-xs-12">
+                    Visit <span class="project-link-title"></span>
+                  </a>
                 </div>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <img class="project-image" />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      $(function(){
-        $('.toggle-learn-more').click(function(){
-          $('.learn-more').toggle();
-        });
+    
+    <script type="text/javascript">
+
+      var pde = {
+        'lukeacland' : {
+          'name' : 'Luke Acland',
+          'details-1' : 'Luke Acland is a barrister based in Nelson, New Zealand.',
+          'details-2' : 'When he was ready to start his own business he knew to contact Bird Apps to get a functional and stunning website to tell the world he was ready to go.',
+          'details-3' : '',
+          'image' : 'assets/projects/luke-acland_iphone.jpg',
+          'url' : 'Lukeacland.co.nz'
+        },
+        'chalkle' : {
+          'name' : 'Chalkle',
+          'details-1' : 'Chalkle is a learning management system for independent teachers',
+          'details-2' : 'Teachers and organisations create classes, take bookings, payments, and manage their learners - all through the application.',
+          'details-3' : 'Chalkle is also a destination app for anyone looking to learn something new.',
+          'image' : 'assets/projects/chalkle_iphone.jpg',
+          'url' : 'Chalkle.com'
+        },
+        'sspn' : {
+          'name' : 'SSPN',
+          'details-1' : 'Soldier, Shaman, Pirate, or Ninja - Which one are you?',
+          'details-2' : 'A fun quiz app which indicates your personality type based on a series of questions.',
+          'details-3' : 'Mobile optimized and integrated with Facebook.',
+          'image' : 'assets/projects/sspn_iphone.jpg',
+          'url' : 'sspn.me'
+        },
+        'tpie' : {
+          'name' : 'TPIE',
+          'details-1' : 'Up to date field data on your resources in the field.',
+          'details-2' : 'Every employee needs the Time, People, Information, and Equipment to do their job correctly. The TPIE mobile reporting app gives them the opportunity to tell management how adequate they are resourced.',
+          'details-3' : 'Management gets a web interface with in-depth up-to-date analytics categorised by work site, job role, or other customisation labels - as well as individual comments from employees and historical data.',
+          'image' : 'assets/projects/tpie_iphone.jpg',
+          'url' : 'tpie.co.nz'
+        } 
+      }
+
+      
+
+      $(".projectModal").click(function(){
+        var project_name = $(this).data('project');
+        $('.project-title').text(pde[project_name]['name']);
+        $('.project-desc-1').text(pde[project_name]['details-1']);
+        $('.project-desc-2').text(pde[project_name]['details-2']);
+        $('.project-desc-3').text(pde[project_name]['details-3']);
+        $('.project-image').attr('src',pde[project_name]['image']);
+        $('.project-link').attr('href','//'+pde[project_name]['url']);
+        $('.project-link-title').text(pde[project_name]['url']);
+        $('#projectModal').modal('show');
       });
     </script>
   </body>
